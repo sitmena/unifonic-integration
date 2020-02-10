@@ -17,17 +17,20 @@ All URLs referenced in the documentation have the following base:
 
 ## Usage
 
-`from unifonicnextgen.unifonicnextgen_client import UnifonicnextgenClient`
-`from unifonicnextgen.exceptions.api_exception import APIException`
+```python
+from unifonicnextgen.unifonicnextgen_client import UnifonicnextgenClient
 
-`client = UnifonicnextgenClient(UNIFONIC_USER, UNIFONIC_PASSWORD)`
+from unifonicnextgen.exceptions.api_exception import APIException
 
-`try:
+client = UnifonicnextgenClient(UNIFONIC_USER, UNIFONIC_PASSWORD)
+
+try:
    sender_controller = client.rest
    sender_controller.create_send_message(UNIFONIC_APP_SID,
                                          UNIFONIC_SENDER_ID,
                                          'Your Message',
-                                         recipient_phone_number)
+                                         recipient_phone_number)                              
  except APIException as error_message:
      print(error_message)
-     logger.error(error_message)`
+     logger.error(error_message)
+```
