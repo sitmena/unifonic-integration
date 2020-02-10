@@ -17,6 +17,12 @@ All URLs referenced in the documentation have the following base:
 
 ## Usage
 
+Add `git+https://github.com/sitmena/unifonic-integration.git` to 'requirements.txt'
+
+Run 'pip install -r requirements.txt
+
+
+
 ```python
 from unifonicnextgen.unifonicnextgen_client import UnifonicnextgenClient
 
