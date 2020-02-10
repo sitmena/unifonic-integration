@@ -34,7 +34,7 @@ class RestController(BaseController):
                 app
 
         Returns:
-            GetScheduledMessageResponse: Response from the API. 
+            GetScheduledMessageResponse: Response from the API.
 
         Raises:
             APIException: When an error occurs while fetching the data from
@@ -84,8 +84,7 @@ class RestController(BaseController):
                             response_type=None,
                             correlation_id=None,
                             base_encode=None,
-                            status_callback=None,
-                            async=False):
+                            status_callback=None):
         """Does a POST request to /rest/SMS/messages.
 
         Unifonic Send API allows you to send  text messages to users around
@@ -113,7 +112,7 @@ class RestController(BaseController):
                 executed asynchronously as soon as it is sent
 
         Returns:
-            SendResponse: Response from the API. 
+            SendResponse: Response from the API.
 
         Raises:
             APIException: When an error occurs while fetching the data from
@@ -141,8 +140,7 @@ class RestController(BaseController):
             'responseType': response_type,
             'CorrelationID': correlation_id,
             'baseEncode': base_encode,
-            'statusCallback': status_callback,
-            'async': async
+            'statusCallback': status_callback
         }
         _query_builder = APIHelper.append_url_with_query_parameters(_query_builder,
             _query_parameters, Configuration.array_serialization)
@@ -206,7 +204,7 @@ class RestController(BaseController):
                 represent binary data in an ASCII string format
 
         Returns:
-            SendScheduledmessagesResponse: Response from the API. 
+            SendScheduledmessagesResponse: Response from the API.
 
         Raises:
             APIException: When an error occurs while fetching the data from
@@ -291,7 +289,7 @@ class RestController(BaseController):
                 represent binary data in an ASCII string format
 
         Returns:
-            StopScheduledMessagesResponse: Response from the API. 
+            StopScheduledMessagesResponse: Response from the API.
 
         Raises:
             APIException: When an error occurs while fetching the data from
@@ -376,7 +374,7 @@ class RestController(BaseController):
                 represent binary data in an ASCII string format
 
         Returns:
-            GetMessagesDetailsResponse: Response from the API. 
+            GetMessagesDetailsResponse: Response from the API.
 
         Raises:
             APIException: When an error occurs while fetching the data from
